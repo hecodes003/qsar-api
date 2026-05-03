@@ -74,6 +74,15 @@ def load_artifacts():
         import traceback
         traceback.print_exc()
 
+@app.get("/health")
+def health():
+    return {
+        "status": "ok",
+        "model_loaded": model is not None,
+        "scaler_loaded": scaler is not None,
+        "selector_loaded": selector is not None,
+    }
+
 class PredictRequest(BaseModel):
     smiles: str
 
