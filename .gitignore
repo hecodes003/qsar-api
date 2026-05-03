@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pptx
+*.docx
+*.arc
+*.aux
+*.mop
+*.out
+*.png
+*.xml
+*.h5
+CHEMBL_DATASET.csv
